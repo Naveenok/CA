@@ -4,12 +4,16 @@
 package com.ca.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.ca.model.Customer;
+
 /**
- * @author admin
+ * @author Naveen
  *
  */
 @Controller
@@ -20,10 +24,9 @@ public class CustomerInformation {
 		return m;
 	}
 
-	@RequestMapping(value = "/submitcontactinfo", method = RequestMethod.POST)
-	public ModelAndView saveContact() {
+	@RequestMapping(value = "/submitted", method = RequestMethod.POST)
+	public ModelAndView saveContact(@ModelAttribute("cust") Customer customer) {
 		ModelAndView m = new ModelAndView("submitted");
-		m.addObject("print", "your application has beed submitted");
 		return m;
 	}
 

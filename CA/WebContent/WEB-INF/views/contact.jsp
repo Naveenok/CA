@@ -7,11 +7,23 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="submitcontactinfo" method="post">
-		<input type="text" name="name"><br> <input type="text"
-			name="email"><br> <input type="text" name="phonenumber"><br>
-		<input type="text" name="message"><br> <input
-			type="submit" value="send"><br>
+	<form action="submitted" method="post" >
+		<p>
+			Name : <input type="text" name="name">
+		</p>
+		<br> <br>
+		<p>
+			Email : <input type="text" name="email">
+		</p>
+		<br> <br>
+		<p>
+			Phone Number : <input type="text" name="phoneNumber">
+		</p>
+		<br> <br>
+		<p>
+			Message : <input type="text" name="message">
+		</p>
+		<br> <br> <input type="submit" value="send"><br>
 	</form>
 </body>
 </html>
